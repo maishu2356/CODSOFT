@@ -1,0 +1,22 @@
+todo_list = []
+
+while True:
+    print("\n1. Add task")
+    print("2. View tasks")
+    print("3. Quit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        task = input("Enter a task: ")
+        todo_list.append(task)
+        print("Task added!")
+    elif choice == "2":
+        print("Your tasks:")
+        for i, task in enumerate(todo_list, start=1):
+            print(f"{i}. {task}")
+    elif choice == "3":
+        print("Thankyou visit us again!")
+        break
+    else:
+        print("Invalid option. Please choose a valid option.")
